@@ -45,15 +45,28 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
 
       <IndexPageBlurb>
         <ChangeContainer>
-          {posts.map(({ node: post }, index) => (
-            <ChangeUpdate
-              post={post}
-              index={index}
-              ref={refs[index]}
-              contentItems={posts}
-              refs={refs}
-            ></ChangeUpdate>
-          ))}
+          {posts
+            .sort(function (currPost, nextPost) {
+              const currPostDate = new Date(currPost.node.frontmatter.date);
+              const nextPostDate = new Date(nextPost.node.frontmatter.date);
+
+              if (currPostDate < nextPostDate) {
+                return -1;
+              } else if (currPostDate > nextPostDate) {
+                return 1;
+              }
+              return 0;
+            })
+            .reverse()
+            .map(({ node: post }, index) => (
+              <ChangeUpdate
+                post={post}
+                index={index}
+                ref={refs[index]}
+                contentItems={posts}
+                refs={refs}
+              ></ChangeUpdate>
+            ))}
         </ChangeContainer>
       </IndexPageBlurb>
     </PageWrapper>

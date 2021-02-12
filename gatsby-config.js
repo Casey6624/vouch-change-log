@@ -17,7 +17,7 @@ module.exports = {
       },
       __key: "pages",
     },
-    /*     {
+    {
       resolve: `gatsby-source-git`,
       options: {
         name: `vouch-change-log`,
@@ -26,8 +26,8 @@ module.exports = {
         // Only import the docs folder from a codebase.
         patterns: `*.md`,
       },
-    }, */
-    {
+    },
+    /*     {
       resolve: `gatsby-source-git`,
       options: {
         name: `vouch-change-log`,
@@ -36,6 +36,6 @@ module.exports = {
         // Only import the docs folder from a codebase.
         patterns: `docs/**`,
       },
-    },
+    }, */
   ],
 };
