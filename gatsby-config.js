@@ -21,11 +21,21 @@ module.exports = {
       resolve: `gatsby-source-git`,
       options: {
         name: `vouch-change-log`,
+        remote: `https://github.com/vouchdevhub/vouch-changelog.git`,
+        branch: `main`,
+        // Only import the docs folder from a codebase.
+        patterns: `*.md`,
+      },
+    },
+    /*     {
+      resolve: `gatsby-source-git`,
+      options: {
+        name: `vouch-change-log`,
         remote: `https://github.com/Casey6624/vouch-change-log.git`,
         branch: `master`,
         // Only import the docs folder from a codebase.
         patterns: `docs/**`,
       },
-    },
+    }, */
   ],
 };

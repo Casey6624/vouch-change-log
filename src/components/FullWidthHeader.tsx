@@ -25,6 +25,7 @@ const Container = styled.div`
   h1 {
     font-size: 4rem;
     font-family: Montserrat, sans-serif;
+    line-height: 4rem;
   }
 
   h1 > span {

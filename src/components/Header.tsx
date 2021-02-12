@@ -9,7 +9,7 @@ const HeadContainer = styled.div`
   background: white;
   padding: 25px;
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 100px 1fr;
   align-items: center;
 `;
 
@@ -33,7 +33,6 @@ const NavItem = styled.li`
   a {
     color: #082842;
     text-decoration: none;
-
     display: inline-block;
     padding: 15px 20px;
     position: relative;
@@ -62,12 +61,12 @@ function Header() {
     <HeadContainer>
       <img src="/assets/vouchlogo.svg" />
       <NavBar>
-        <NavItem>
+        <NavItem active>
           <a>change log</a>
         </NavItem>
-        <NavItem>
+        {/*         <NavItem>
           <a>dev blog</a>
-        </NavItem>
+        </NavItem> */}
       </NavBar>
     </HeadContainer>
   );

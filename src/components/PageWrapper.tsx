@@ -4,7 +4,7 @@ import { vouchLight, vouchDark } from "../common/themes";
 const PageWrapperContainer = styled.div`
   position: relative;
   margin-top: 140px;
-  min-height: 100%auto;
+  min-height: 100%;
   background: linear-gradient(
       168deg,
       rgb(255, 255, 255) 33%,

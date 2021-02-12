@@ -1,7 +1,16 @@
 @import-normalize;
 
-html {
-  box-sizing: border-box; /* 1 */  
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+  box-sizing: border-box; /* 1 */
+  min-height: -webkit-fill-available;
+  height: 100%;
+}
+
+div[role="group"][tabindex] {
+  height: 100%;
 }
 
 *,
@@ -9,7 +18,8 @@ html {
 *::after {
   box-sizing: inherit;
 }
-body{
+
+body {
   margin: 0;
   line-height: 1.5em;
   font-size: 16px;
@@ -47,4 +57,19 @@ a {
 }
 p {
   white-space: pre-line;
+}
+
+p::selection,
+li::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+strong::selection,
+div::selection,
+img::selection,
+span::selection {
+  color: white;
+  background: #34bebd;
 }
