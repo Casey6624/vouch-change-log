@@ -6,11 +6,13 @@ const HeadContainer = styled.div`
   top: 0;
   left: 0;
   width: 100%;
+  min-width: 100%;
   background: white;
   padding: 25px;
   display: grid;
   grid-template-columns: 100px 1fr;
   align-items: center;
+  z-index: 1000;
 `;
 
 const NavBar = styled.ul`

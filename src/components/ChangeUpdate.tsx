@@ -25,15 +25,14 @@ interface IPost {
   CSS for all the dynamic content which is pulled in from the .md file
 */
 const ChangeBlurbContainer = styled.div`
-  p {
-    text-align: justify;
-  }
+  padding: 5px;
   h1,
   h2,
   h3,
   h4,
   h5 {
     text-transform: capitalize;
+    line-height: 100%;
   }
 `;
 
@@ -56,7 +55,7 @@ const PostTitle = styled.h1<{ mobile?: boolean }>`
 const Nav = styled.div`
   div {
     position: sticky;
-    top: 120px;
+    top: 180px;
   }
 
   @media (max-width: ${MOBILE_BREAK}px) {
